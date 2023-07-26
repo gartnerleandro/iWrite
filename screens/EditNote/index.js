@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Keyboard, KeyboardAvoidingView, ScrollView, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native";
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { createNote, updateNote } from "../../utils/db";
 import Colors from '../../utils/colors';
@@ -11,6 +12,7 @@ export default function EditNoteScreen({ navigation, route }) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const insets = useSafeAreaInsets();
 
   useEffect(() => {
     if (note) {
@@ -33,7 +35,7 @@ export default function EditNoteScreen({ navigation, route }) {
   return (
     <KeyboardAvoidingView behavior="padding">
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-        <View style={styles.header}>
+        <View style={{...styles.header, paddingTop: insets.top, paddingBottom: insets.bottom}}>
           <TouchableOpacity style={styles.button} onPress={() => navigation.goBack()} disabled={isLoading}>
             <Text style={styles.cancelText}>Cancel</Text>
           </TouchableOpacity>

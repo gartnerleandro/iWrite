@@ -5,7 +5,6 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    paddingHorizontal: 16,
     backgroundColor: Colors.primary,
   },
   header: {
@@ -18,12 +17,13 @@ export default StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: Colors.accent,
+    padding: 16,
   },
   addButton: {
     flexDirection: 'row',
     gap: 4,
     alignItems: 'center',
-    padding: 8,
+    padding: 16,
   },
   addText: {
     fontWeight: 'bold',
@@ -31,5 +31,6 @@ export default StyleSheet.create({
   },
   listContainer: {
     gap: 16,
+    paddingHorizontal: 16,
   }
 });

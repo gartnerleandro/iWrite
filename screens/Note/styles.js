@@ -9,17 +9,21 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
+    padding: 16,
+    minWidth: 64,
   },
   backButton: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
   },
+  backText: {
+    textAlign: 'center',
+  },
   editText: {
     fontWeight: 'bold',
     color: Colors.secondary,
+    textAlign: 'center',
   },
   content: {
     padding: 16,

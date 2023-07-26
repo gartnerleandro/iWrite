@@ -10,6 +10,7 @@ export default StyleSheet.create({
   },
   button: {
     padding: 16,
+    minWidth: 64,
   },
   cancelText: {
     color: Colors.red,
@@ -26,6 +27,7 @@ export default StyleSheet.create({
     marginBottom: 16,
   },
   contentInput: {
+    textAlignVertical: "top",
     minHeight: 400,
   }
 });
